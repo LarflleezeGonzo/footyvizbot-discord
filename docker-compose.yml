@@ -1,0 +1,11 @@
+version: "3"
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./bot:/app/bot
+    environment:
+      - TOKEN=your_discord_bot_token
+    restart: unless-stopped
